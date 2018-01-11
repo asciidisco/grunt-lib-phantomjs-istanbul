@@ -1,3 +1,18 @@
+# Puppeteer
+v0.0.3:
+  date: 2018-01-04
+  changes:
+    - fixed some issues with assigning overrides to the puppeteer-producer child job.
+v0.0.2:
+  date: 2018-01-04
+  changes:
+    - decided to create improvements alongside the qunit-puppeteer plugin. https://github.com/lee-leonardo/grunt-qunit-puppeteer-istanbul
+v0.0.1:
+  date: 2018-01-01
+  changes:
+    - a work in progress. the local host related functionality does not work.
+
+# PhantomJS
 v0.6.0:
   date: 2014-03-28
   changes:

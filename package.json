@@ -1,15 +1,15 @@
 {
-  "name": "grunt-lib-phantomjs-istanbul",
-  "description": "Grunt and PhantomJS, sitting in a tree for istanbul based code coverage.",
-  "version": "1.0.1",
-  "homepage": "http://github.com/asciidisco/grunt-lib-phantomjs-istanbul",
+  "name": "grunt-lib-puppeteer-istanbul",
+  "description": "Grunt and Puppeteer, sitting in a tree for istanbul based code coverage.",
+  "version": "0.0.2",
+  "homepage": "https://github.com/lee-leonardo/grunt-lib-puppeteer-istanbul",
   "author": {
-    "name": "Grunt Team",
-    "url": "http://gruntjs.com/"
+    "name": "Leonardo Lee",
+    "url": ""
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/asciidisco/grunt-lib-phantomjs-istanbul.git"
+    "url": "git@github.com:lee-leonardo/grunt-lib-puppeteer-istanbul.git"
   },
   "bugs": {
     "url": "https://github.com/asciidisco/grunt-lib-phantomjs-istanbul/issues"
@@ -17,31 +17,46 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/asciidisco/grunt-lib-phantomjs-istanbul/blob/master/LICENSE-MIT"
+      "url": "https://github.com/lee-leonardo/grunt-lib-puppeteer-istanbul/blob/master/LICENSE-MIT"
     }
   ],
+  "watch": {
+    "test": "{src,test,bin}/*.js",
+    "grunt-debug": "Gruntfile.js"
+  },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 7.6.0"
   },
   "scripts": {
-    "test": "grunt jshint test"
+    "watch": "npm-watch",
+    "test": "grunt jshint test",
+    "grunt-debug": "grunt jshint test --debug",
+    "generateBin": "npm link"
+  },
+  "bin": {
+    "grunt-puppeteer": "./bin/puppeteer-producer.js"
   },
   "dependencies": {
     "eventemitter2": "^0.4.9",
-    "phantomjs-prebuilt": "^2.1.3",
-    "semver": "^4.3.0",
-    "temporary": "^0.0.8"
+    "node-ipc": "^9.1.1",
+    "npm-watch": "^0.3.0",
+    "puppeteer": "^0.13.0"
   },
   "devDependencies": {
     "difflet": "^0.2.3",
     "express": "^4.11.2",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "grunt-contrib-jshint": "^0.11.3"
+    "grunt-contrib-jshint": "^1.1.0"
   },
-  "main": "lib/phantomjs",
+  "main": "src/puppetmaster",
   "files": [
-    "lib",
-    "phantomjs"
+    "src",
+    "bin",
+    "puppeteer"
+  ],
+  "keywords": [
+    "grunt",
+    "gruntplugin"
   ]
 }

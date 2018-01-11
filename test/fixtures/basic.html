@@ -6,7 +6,7 @@
 // Send messages to the parent PhantomJS process via alert! Good times!!
 function sendMessage() {
   var args = [].slice.call(arguments);
-  alert(JSON.stringify(args));
+  console.log(args);
 }
 
 sendMessage('test', 1, 2, 3);
